@@ -1,0 +1,10 @@
+#!/bin/bash
+chmod 755 {{pkg.svc_data_path}}
+
+mkdir -p {{pkg.svc_data_path}}/htdocs
+
+mkdir -p {{pkg.svc_data_path}}/cgi-bin
+cp {{pkg.path}}/hello-world  {{pkg.svc_data_path}}/cgi-bin/
+cp {{pkg.path}}/deploy.png  {{pkg.svc_data_path}}/cgi-bin/
+
+chmod 755 {{pkg.svc_data_path}}/cgi-bin/hello-world
